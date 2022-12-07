@@ -110,6 +110,10 @@ rails s
 | GET | /me| To retrieve a logged in user|
 | DELETE | /logout| To destroy a logged in user details|
 
+### Future Updates
+* Add routes and controller action for updating reviews 
+* Add a route and controller action for adding new and updating restaurant and food 
+* Add a route and controller action for admin login and sign up
 
 ### Technologies Used
 * [Ruby on rails](https://guides.rubyonrails.org/) Rails is a web application development framework written in the Ruby programming language. It allows for installation and managing of dependencies and communication with databases.
