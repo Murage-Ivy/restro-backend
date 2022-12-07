@@ -1,15 +1,17 @@
-# Heros
+# Restro-Backend
 
 ### Introduction
-The heros API is an application programming interface that provides data and information about a list of heros.
+Restro-backend API is an application programming interface that provides data and information about restaurants, different dishes that the restaurants sell and the reviews that users have posted about the restaurants. 
 <br/>
-This includes details about their  powers, and also their strengths .
+
 
 ## Models identified and Relationships
-* ```Hero has_many powers through heropowers```
-* ```Power has_many heros through heropowers```
-* ```heropower belongs_to hero and belongs_to power```
-
+* ```Restaurant has_many reviews ```
+* ```Restaurant has_many foods```
+* ```Review  belongs_to a restaurant ```
+* ```Review belongs_to a user```
+* ```Food belongs_to a restaurant```
+* ```User has_many Reviews```
 
 ### Heros Features
 * GET all details for all heroes
