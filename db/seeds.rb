@@ -1,6 +1,11 @@
 user_image_urls = ["https://img.freepik.com/free-photo/medium-shot-african-woman-pointing-forward_23-2148747976.jpg?w=360&t=st=1669741025~exp=1669741625~hmac=ca3db8a99f0ffa5da11a20cfd6d8d95b38156476f263a3815de26f0d1aec9201",
                    "https://img.freepik.com/free-photo/happy-african-woman-leather-vest-with-shiny-confetti-her-cheeks_23-2148747930.jpg?w=360&t=st=1669741072~exp=1669741672~hmac=629411b81402341781427587e66cddd0a5f40905a82533f14a243ab0a8c4daec"]
 puts "🧑🧑 Seeding"
+User.destroy_all
+Review.destroy_all
+Restaurant.destroy_all
+Review.destroy_all
+Food.destroy_all
 
 User.create(username: Faker::Name.middle_name,
             password: "123",
@@ -13,7 +18,6 @@ User.create(username: Faker::Name.middle_name,
             image_url: user_image_urls.sample)
 
 puts "🍟🍟 Seeding!!"
-
 Restaurant.create(name: "Cj's",
                   address: "Nairobi, Kenya",
                   rating: rand(1..5),
