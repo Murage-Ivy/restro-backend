@@ -62,18 +62,18 @@ Restro-backend API is an application programming interface that provides data an
 ]
 }
 ```
-* GET all details for all powers.
+* GET all details for all reviews for a single restaurant.
 ```
 [
 {
 "id": 1,
-"name": "Rosette Jakubowski",
-"description": "Id reiciendis nam. Qui ut sint. Aliquam voluptate *tempore.*"
-},
-{
-"id": 3,
-"name": "Freddy Wiza",
-"description": "~Qui~ et rerum. Qui consequuntur expedita. Laborum molestias quam."
+"title": "Nesciunt consequatur molestiae sed.",
+"comment": "Overall, the evening was a smash and I am so glad there is a new location closer to my office!!",
+"user": {
+"id": 1,
+"username": "Moen",
+"image_url": "https://img.freepik.com/free-photo/happy-african-woman-leather-vest-with-shiny-confetti-her-cheeks_23-2148747930.jpg?w=360&t=st=1669741072~exp=1669741672~hmac=629411b81402341781427587e66cddd0a5f40905a82533f14a243ab0a8c4daec"
+}
 }
 ]
 ```
