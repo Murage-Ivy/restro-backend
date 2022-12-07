@@ -106,7 +106,7 @@ rails s
 | POST | /restaurants/:id/reviews | To create a new review|
 | DELETE| /restaurants/:id/reviews/:id| To delete a single review|
 | POST | /login| To create a new login|
-| POST | /sign up| To create a new signed up user|
+| POST | /signup| To create a new signed up user|
 | GET | /me| To retrieve a logged in user|
 | DELETE | /logout| To destroy a logged in user details|
 
