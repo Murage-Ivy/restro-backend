@@ -243,7 +243,7 @@ Restaurant.create(name: "Kilimanjaro Jamia",
                   rating: rand(1..5),
                   like: false,
                   description: Faker::Restaurant.description,
-                  image_url: "https://pbs.twimg.com/media/EzzOB3IXsAQmoMG.jpg")
+                  image_url: "https://images.unsplash.com/photo-1613946069412-38f7f1ff0b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdGF1cmFudHN8ZW58MHx8MHx8&w=1000&q=80")
 
 3.times do
   Review.create(title: Faker::Lorem.sentence,
@@ -293,6 +293,62 @@ Food.create(name: Faker::Food.dish,
             price: rand(5..20),
             rating: rand(1..5),
             image_url: "https://img.freepik.com/free-photo/front-view-burger-fries-plate_23-2148784444.jpg?w=740&t=st=1669740363~exp=1669740963~hmac=a0970b47b9fbfffd7903b9a1b2b51152841df13771cbbd2dbad8474228659e79")
+
+Restaurant.create(name: "KFC",
+                  address: "Nairobi, Kenya",
+                  rating: rand(1..5),
+                  like: false,
+                  description: Faker::Restaurant.description,
+                  image_url: "https://www.eatthis.com/wp-content/uploads/sites/4/2019/05/kfc-restaurant-exterior.jpg?quality=82&strip=1")
+
+3.times do
+  Review.create(title: Faker::Lorem.sentence,
+                comment: Faker::Restaurant.review,
+                restaurant_id: 6,
+                user_id: User.all.sample.id)
+end
+Food.create(name: "Chicken",
+            restaurant_id: 6,
+            description: Faker::Lorem.sentence,
+            price: rand(5..20),
+            rating: rand(1..5),
+            image_url: "https://igihe.com/IMG/arton119674.png?1561096991")
+
+Food.create(name: "Burger",
+            restaurant_id: 6,
+            description: Faker::Lorem.sentence,
+            price: rand(5..20),
+            rating: rand(1..5),
+            image_url: "https://soranews24.com/wp-content/uploads/sites/3/2021/11/KFC-Japan-chicken-fillet-katsu-burger-sandwich-limited-edition-menu-fast-food-news-2.jpg?w=640")
+
+Food.create(name: "Milkshake",
+            restaurant_id: 6,
+            price: rand(5..20),
+            description: Faker::Lorem.sentence,
+            rating: rand(1..5),
+            image_url: "https://food-images.files.bbci.co.uk/food/recipes/milkshake_19447_16x9.jpg")
+
+Food.create(name: "Sodas",
+            restaurant_id: 6,
+            price: rand(5..20),
+            description: Faker::Lorem.sentence,
+            rating: rand(1..5),
+            image_url: "https://212newyorkpizza.com/wp-content/uploads/2020/07/bottled-sodas.jpg")
+
+Food.create(name: Faker::Food.dish,
+            restaurant_id: 6,
+            price: rand(5..20),
+            description: Faker::Lorem.sentence,
+            rating: rand(1..5),
+            image_url: "https://kfcnamibia.com/wp-content/uploads/2022/07/Summer-Lunch-Box-1024x1024.jpg")
+
+Food.create(name: Faker::Food.dish,
+            restaurant_id: 6,
+            price: rand(5..20),
+            description: Faker::Lorem.sentence,
+            rating: rand(1..5),
+            image_url: "https://img.freepik.com/free-photo/sausage-fried-rice-with-tomatoes-carrots-shiitake-mushrooms-plate_1150-27184.jpg?w=740&t=st=1669740324~exp=1669740924~hmac=10106c369675c40d34982da397c96b4e39a71b076767c8c43fe3e4bf6add9453")
+
 puts "🥘🥘 seeding!!"
 
 puts "⭐⭐ seeding!!"
