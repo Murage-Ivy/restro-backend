@@ -77,67 +77,10 @@ Restro-backend API is an application programming interface that provides data an
 }
 ]
 ```
-* GET a single power details
-```
-{
-"id": 2,
-"name": "Gudrun Waelchi",
-"description": "This is anamzing srength."
-}
-```
-* If a Power of a hero does not exist a json data error is returned
-```
-{
-"error": [
-"Power not found"
-]
-}
-```
-* UPDATE a power
-```
-Before Update
-{
-    "id": 1,
-    "name": "Rosette Jakubowski",
-    "description": "Id reiciendis nam. Qui ut sint. Aliquam voluptate *tempore.*"
-}
-```
-* If there is a validation error it should be returned
-```
-{
-    "erros": [
-        "Description is too short (minimum is 20 characters)"
-    ]
-}
-```
-```
-After Update
-{
-    "id": 1,
-    "name": "Rosette Jakubowski",
-    "description": "One that saves a lot pf people. One of the best powers"
-}
-```
-
-* You can do a post request for a hero-powers.
-```
-{
-    "id": 3,
-    "name": "Sen. Lenard Kassulke",
-    "super_name": "Detox",
-    "powers": [
-        {
-            "id": 1,
-            "name": "Rosette Jakubowski",
-            "description": "One that saves a lot pf people. One of the best powers"
-        }
-    ]
-}
-```
 
 ### Installation Guide
 * Clone this repository [here]
-(https://github.com/Murage-Ivy/pizza-restaurant).
+(https://github.com/Murage-Ivy/restro-backend).
 * After cloning ```cd <applicaction-repo>``` and  install all the dependencies by running:
 ```properties
 Bundle install
@@ -151,18 +94,21 @@ rails db:migrate db:seed
 ```properties
 rails s 
 ```  
-* Connect to the API using Postman on port 3000.
+* Connect to the API using Postman on port 3000 to test the endpoints.
 
 
 ### API Endpoints
 | HTTP Verbs | Endpoints | Action |
 | --- | --- | --- |
-| GET | /heros| To retrieve all heros|
-| GET | /heros/:id | To retrieve a single hero and its powers|
-| GET | /powers| To retrieve details of all powers|
-| GET | /powers/:id | To retrieve a single power details|
-| PATCH | /powers/:id | To update a single power description|
-| POST | /hero_powers | To create a new heropower|
+| GET | /restaurants| To retrieve all restaurants|
+| GET | /restaurants/:id | To retrieve a single restaurant and its foods|
+| GET | /restaurants/:id/reviews| To retrieve details of all reviews for a single restaurant|
+| POST | /restaurants/:id/reviews | To create a new review|
+| DELETE| /restaurants/:id/reviews/:id| To delete a single review|
+| POST | /login| To create a new login|
+| POST | /sign up| To create a new signed up user|
+| GET | /me| To retrieve a logged in user|
+| DELETE | /logout| To destroy a logged in user details|
 
 
 ### Technologies Used
