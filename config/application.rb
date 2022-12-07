@@ -33,9 +33,13 @@ module RestroBackend
 
     # Use SameSite=Strict for all cookies to help protect against CSRF
     # https://owasp.org/www-community/SameSite
-    config.action_dispatch.cookies_same_site_protection = :strict
+    # config.action_dispatch.cookies_same_site_protection = :strict
+    config.session_store :cookie_store, key: "_base_session", domain: :all, same_site: :none, secure: true
 
-    
+    config.action_dispatch.cookies_same_site_protection = :none
+
+    config.force_ssl = true
+
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
