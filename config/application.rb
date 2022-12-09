@@ -33,7 +33,7 @@ module RestroBackend
 
     # Use SameSite=Strict for all cookies to help protect against CSRF
     # https://owasp.org/www-community/SameSite
-    # config.action_dispatch.cookies_same_site_protection = :strict
+    config.action_dispatch.cookies_same_site_protection = :strict
     # config.session_store :cookie_store, key: "user_id", domain: :all, same_site: :None, secure: true
     # config.action_dispatch.cookies_same_site_protection = :none
 
