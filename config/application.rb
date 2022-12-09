@@ -29,16 +29,15 @@ module RestroBackend
     # in config/environments, which are processed later.
     #   # Adding cookies and session middleware
     config.middleware.use ActionDispatch::Cookies
-    config.middleware.use ActionDispatch::Session::CookieStore
+    config.middleware.use ActionDispatch::Session::CookieStore, key: "user_id"
 
     # Use SameSite=Strict for all cookies to help protect against CSRF
     # https://owasp.org/www-community/SameSite
     # config.action_dispatch.cookies_same_site_protection = :strict
-    config.session_store :cookie_store, key: "_base_session", domain: :all, same_site: :none, secure: true
+    # config.session_store :cookie_store, key: "user_id", domain: :all, same_site: :None, secure: true
+    # config.action_dispatch.cookies_same_site_protection = :none
 
-    config.action_dispatch.cookies_same_site_protection = :none
-
-    config.force_ssl = true
+    # config.force_ssl = true
 
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")

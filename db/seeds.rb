@@ -27,8 +27,7 @@ Restaurant.create(name: "Cj's",
 3.times do
   Review.create(title: Faker::Lorem.sentence,
                 comment: Faker::Restaurant.review,
-                restaurant_id: 1,
-                user_id: User.all.sample.id)
+                restaurant_id: 1)
 end
 
 Food.create(name: Faker::Food.dish,
@@ -84,8 +83,7 @@ Restaurant.create(name: "ArtCaffe",
 3.times do
   Review.create(title: Faker::Lorem.sentence,
                 comment: Faker::Restaurant.review,
-                restaurant_id: 2,
-                user_id: User.all.sample.id)
+                restaurant_id: 2)
 end
 Food.create(name: "Pancake With Sliced Strawberry",
             description: "Light and fluffy strawberry pancakes packed with flavor",
@@ -140,8 +138,7 @@ Restaurant.create(name: "The Lord Eroll's",
 3.times do
   Review.create(title: Faker::Lorem.sentence,
                 comment: Faker::Restaurant.review,
-                restaurant_id: 3,
-                user_id: User.all.sample.id)
+                restaurant_id: 3)
 end
 Food.create(name: Faker::Food.dish,
             restaurant_id: 3,
@@ -196,8 +193,7 @@ Restaurant.create(name: "Harvest Restaurant",
 3.times do
   Review.create(title: Faker::Lorem.sentence,
                 comment: Faker::Restaurant.review,
-                restaurant_id: 4,
-                user_id: User.all.sample.id)
+                restaurant_id: 4)
 end
 
 Food.create(name: Faker::Food.dish,
@@ -252,8 +248,7 @@ Restaurant.create(name: "Kilimanjaro Jamia",
 3.times do
   Review.create(title: Faker::Lorem.sentence,
                 comment: Faker::Restaurant.review,
-                restaurant_id: 5,
-                user_id: User.all.sample.id)
+                restaurant_id: 5)
 end
 
 Food.create(name: Faker::Food.dish,
@@ -308,8 +303,7 @@ Restaurant.create(name: "KFC",
 3.times do
   Review.create(title: Faker::Lorem.sentence,
                 comment: Faker::Restaurant.review,
-                restaurant_id: 6,
-                user_id: User.all.sample.id)
+                restaurant_id: 6)
 end
 Food.create(name: "Chicken",
             restaurant_id: 6,

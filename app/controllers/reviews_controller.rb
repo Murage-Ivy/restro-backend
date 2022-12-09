@@ -1,7 +1,9 @@
 class ReviewsController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
-  skip_before_action :authorized, only: [:index]
+  # before_action :authorized
+  # skip_before_action :authorized, only: [:index]
+
   wrap_parameters format: []
 
   def index
@@ -15,7 +17,7 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    review = @current_user.reviews.create!(review_params)
+    review = Review.create!(review_params)
     render json: review, serializer: ReviewSerializer, status: :created
   end
 
@@ -42,8 +44,13 @@ class ReviewsController < ApplicationController
   end
 
   def render_not_found_response
-    render json: { errors: ["Review not found"] }, status: :not_found
+    render json: { errors: ["Not authorized"] }, status: :not_found
   end
+
+  # def authorized
+  #   @current_user = User.find(session[:user_id])
+  #   render json: { errors: ["Not authorized "] } unless session.include? :user_id
+  # end
 
   def find_review
     Review.find(params[:id])
