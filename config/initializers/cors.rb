@@ -8,7 +8,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins /http:\/\/(.*?)\.example\.com/
+    origins "https://restro-api.onrender.com"
 
     resource "*",
       headers: :any,
